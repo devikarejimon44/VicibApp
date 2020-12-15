@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.Vicib.vicibapp">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:remove="android:maxSdkVersion" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:requestLegacyExternalStorage="true">
+        <activity android:name=".Reports.BasicActiveMembers"></activity>
+        <activity android:name=".Complaints.ComplaintStatus" />
+        <activity android:name=".Complaints.ComplaintsRegistration" />
+        <activity android:name=".IDCard" />
+        <activity android:name=".Payout.PayoutLedger" />
+        <activity android:name=".RepurchasePlanReports.RepurchaseIncomeDetails" />
+        <activity android:name=".RepurchasePlanReports.RepurchaseIncome" />
+        <activity android:name=".RepurchasePlanReports.DownlineRepurchaseDetails" />
+        <activity android:name=".RepurchasePlanReports.RepurchaseBVReports" />
+        <activity android:name=".PremiumPlanReports.PremiumTeamSalesBonusDetails" />
+        <activity android:name=".PremiumPlanReports.PremiumTeamSalesBVMatching" />
+        <activity android:name=".PremiumPlanReports.PremiumRightSideSales" />
+        <activity android:name=".PremiumPlanReports.PremiumLeftSideSales" />
+        <activity android:name=".StandardPlanReports.StandardTeamSalesBonusDetails" />
+        <activity android:name=".StandardPlanReports.StandardTeamSalesBVMatching" />
+        <activity android:name=".StandardPlanReports.StandardRightSideSales" />
+        <activity android:name=".StandardPlanReports.StandardLeftSideSales" />
+        <activity android:name=".Reports.RightSideMembers" />
+        <activity android:name=".Reports.LeftSideMembers" />
+        <activity android:name=".Reports.SponsorsList" />
+        <activity android:name=".Reports.FirstPurchaseBVReport" />
+        <activity android:name=".Reports.MyProducts" />
+        <activity android:name=".Gene.SponsorDownlineList" />
+        <activity android:name=".Gene.SponsorTabularView" />
+        <activity android:name=".Gene.SponsorTree" />
+        <activity android:name=".Gene.StandardPlanGenealogy" />
+        <activity android:name=".Gene.PremiumPlanGenealogy" />
+        <activity android:name=".Registration" />
+      <!-- <activity android:name="com.Vicib.vicibapp.ui.Report.My_Product.MyProduct"></activity> -->
+        <activity android:name=".atv.Treewithsponsers" />
+
+
+        <activity android:name=".ui.Genealogy.RegVacant" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".District.Dist_list_item" />
+        <activity android:name=".District.district_list_item" />
+        <activity android:name=".State.state_list_item" />
+        <activity android:name=".ChangePassword" />
+        <activity android:name=".ProductStore" />
+        <activity android:name=".MyProfile.MyProfile" />
+        <activity android:name=".Login" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:usesCleartextTraffic="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

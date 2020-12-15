@@ -1,0 +1,43 @@
+package com.Vicib.vicibapp.ui;
+
+
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.Vicib.vicibapp.R;
+import com.Vicib.vicibapp.ui.Dashboard.DashBoardFragment;
+
+
+public class RegistrationFragment extends DashBoardFragment {
+
+
+    public RegistrationFragment() {
+        // Required empty public constructor
+    }
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+//        if (container!=null)
+//        {
+//            container.removeAllViewsInLayout();
+//        }
+        // Inflate the layout for this fragment
+
+        View view = inflater.inflate(R.layout.fragment_registration, container, false);
+
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Registration");
+
+        return view;
+    }
+
+
+
+    }
+
+
+
